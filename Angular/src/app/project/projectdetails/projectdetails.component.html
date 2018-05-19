@@ -1,0 +1,61 @@
+<div class="container body-content">
+        
+
+
+    <h2>Details Of Project</h2>
+    
+    <form [formGroup]="FormData" (ngSubmit) = "OnClickSubmit(FormData.value)" action="/employee/show" method="post">
+           <div class="form-horizontal">
+            
+            <hr >
+            
+         
+            <div class="form-group">
+                <label class="control-label col-md-2" for="EName">Project Name</label>
+                <div class="col-md-10">
+                    <label class="control-label col-md-2">{{ pedit.Pname}}</label>  
+          </div>
+      </div>
+            
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Desg">Start Date</label>
+                <div class="col-md-10">
+                    <label class="control-label col-md-2">{{ pedit.StartDate}}</label>  
+                   
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Mid">End Date</label>
+                <div class="col-md-10">
+                    <label class="control-label col-md-2">{{ pedit.endDate}}</label>  
+                     
+                  </div>
+              </div>
+            
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Email">ClientName</label>
+                <div class="col-md-10">
+                    <label class="control-label col-md-2">{{ pedit.ClientName}}</label> 
+                    </div>
+            </div>
+    
+           
+          </div>
+    </form>
+    <div>
+        <a href="/project/showproject">Back to List</a>
+    </div>
+  
+  
+  
+  
+  
+   
+    
+  
+  
+     
+  

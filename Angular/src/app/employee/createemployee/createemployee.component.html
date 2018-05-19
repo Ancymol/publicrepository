@@ -1,0 +1,149 @@
+
+  <h2>Create</h2>
+  
+  <form [formGroup]="FormData" (ngSubmit) ="OnClickSubmit(FormData.value)" >
+      <div class="form-horizontal">
+          <h4>Employee</h4>
+          
+          
+       
+          <div class="form-group">
+              <label class="control-label col-md-2" for="EName">Employee Name</label>
+                <div class="col-md-10">
+                  <input formControlName="EName" class="form-control text-box single-line" type="text" value="" placeholder=" Name"/>
+                    
+                        <div *ngIf="FormData.controls.EName.errors && (FormData.controls.EName.dirty || FormData.controls.EName.touched)" class="alert-danger">
+                            <div *ngIf="FormData.controls.EName.errors.required">
+                                This field Required
+                            </div>
+                        </div>
+                </div>
+             </div>
+          
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="Desg">Designation</label>
+              <div class="col-md-10">
+                  <input formControlName="Desg"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                  <div *ngIf="FormData.controls.Desg.errors && (FormData.controls.Desg.dirty || FormData.controls.Desg.touched)" class="alert-danger">
+                        <div *ngIf="FormData.controls.Desg.errors.required">
+                            This field Required
+                        </div>
+                    </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="Mid">Manager Id</label>
+              <div class="col-md-10">
+                  
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Mid" data-valmsg-replace="true"></span>
+                  <select data-val="true" formControlName="Mid" id="Mid" name="Mid" >
+                    <option *ngFor="let emp of Employee" value="{{emp.Eid}}">{{emp.EName}}</option>
+                  </select>
+                </div>
+          </div>
+          
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="Email">Email</label>
+              <div class="col-md-10">
+                  <input formControlName="Email" class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="SkillSet">Skill Set</label>
+              <div class="col-md-10">
+                  <input formControlName="SkillSet" class="form-control text-box single-line" id="SkillSet" name="SkillSet" type="text" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="SkillSet" data-valmsg-replace="true"></span>
+                  <div *ngIf="FormData.controls.Desg.errors && (FormData.controls.Desg.dirty || FormData.controls.Desg.touched)" class="alert-danger">
+                        <div *ngIf="FormData.controls.Desg.errors.required">
+                            This field Required
+                        </div>
+                    </div>
+                </div>
+          </div>
+  
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                   <input type="submit" value="Create" class="btn btn-default" [disabled]="!FormData.valid"  />
+              </div>
+          </div>
+        </div>
+  </form>
+  
+  <!-- <div>
+      <a href="/employees/showemployees">Back to List</a>
+  </div> -->
+
+
+
+
+
+ <!--<h1>Create Employee</h1>
+<form>
+    <div class="form-horizontal">
+       
+        <div class="form-group">
+            <label class = "control-label col-md-2">Employee Id</label> 
+            <div class="col-md-10">
+              <input type="number" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Employee Name</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Designation</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Manger Id</label> 
+            <div class="col-md-10">
+              <input type="number" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Email</label> 
+            <div class="col-md-10">
+              <input type="email" value="" class = "control-label col-md-2">
+            </div></div>
+       
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Skill Set</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+             
+            </div>
+
+            <div class="form-group">
+              
+                  <input type="submit" value="Create" class="btn btn-default" />
+                  <br>  <br>
+                  <a href="/Employee">Back to List</a>
+              </div>
+          </div>
+     
+           <div>
+           <a href="/Employee">Back to List</a>
+           </div>
+        </div>
+
+</form>-->
+  
+
+
+    

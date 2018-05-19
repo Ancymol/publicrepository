@@ -1,0 +1,113 @@
+
+  <h2>Create</h2>
+  <form [formGroup]="FormData" (ngSubmit) ="OnClickSubmit(FormData.value)" >
+    <div class="form-horizontal">
+  
+          <h4>User story</h4>
+          
+          <div class="form-group">
+        
+            <label class="control-label col-md-2" for="story">Userstory</label>
+      <div class="col-md-10">
+          <input formControlName="story" class="form-control text-box single-line" type="text" value="" />
+          <span class="field-validation-valid text-danger" data-valmsg-for="story" data-valmsg-replace="true"></span>
+          <div *ngIf="FormData.controls.story.errors && (FormData.controls.story.dirty || FormData.controls.story.touched)" class="alert-danger">
+            <div *ngIf="FormData.controls.stroy.errors.required">
+                This field Required
+            </div>
+        </div>
+      
+        </div>
+  </div>
+ 
+  <div class="form-group">
+        
+    <label class="control-label col-md-2" for="story"> Project id</label>
+<div class="col-md-10">
+  <input formControlName="Project_id" class="form-control text-box single-line" type="number" value="" />
+  <span class="field-validation-valid text-danger" data-valmsg-for="story" data-valmsg-replace="true"></span>
+</div>
+</div>
+
+  
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                  <input type="submit" value="Create" class="btn btn-default"[disabled]="!FormData.valid"/>
+              </div>
+          </div>
+      
+
+</div>
+</form>
+  <div>
+      <a href="/userstory/showstory">Back to List</a>
+  </div>
+
+ 
+
+
+
+ <!--<h1>Create Employee</h1>
+<form>
+    <div class="form-horizontal">
+       
+        <div class="form-group">
+            <label class = "control-label col-md-2">Employee Id</label> 
+            <div class="col-md-10">
+              <input type="number" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Employee Name</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Designation</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Manger Id</label> 
+            <div class="col-md-10">
+              <input type="number" value="" class = "control-label col-md-2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Email</label> 
+            <div class="col-md-10">
+              <input type="email" value="" class = "control-label col-md-2">
+            </div></div>
+       
+
+        <div class="form-group">
+            <label class = "control-label col-md-2">Skill Set</label> 
+            <div class="col-md-10">
+              <input type="text" value="" class = "control-label col-md-2">
+             
+            </div>
+
+            <div class="form-group">
+              
+                  <input type="submit" value="Create" class="btn btn-default" />
+                  <br>  <br>
+                  <a href="/Employee">Back to List</a>
+              </div>
+          </div>
+     
+           <div>
+           <a href="/Employee">Back to List</a>
+           </div>
+        </div>
+</div>
+</form>-->
+  
+
+
+ 

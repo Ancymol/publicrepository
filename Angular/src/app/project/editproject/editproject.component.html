@@ -1,0 +1,73 @@
+<div class="container body-content">
+        
+
+
+    <h2>Edit</h2>
+    
+    <form [formGroup]="FormData" (ngSubmit) = "OnClickSubmit(FormData.value)" action="/employee/show" method="post">
+           <div class="form-horizontal">
+            <h4>Project</h4>
+            <hr >
+            
+         
+            <div class="form-group">
+                <label class="control-label col-md-2" for="EName">Project Name</label>
+                <div class="col-md-10">
+                    <input formControlName="Pname" class="form-control text-box single-line" type="text" value=""
+                    placeholder=" Name"/>
+                    <span class="field-validation-valid text-danger" data-valmsg-for="EName" data-valmsg-replace="true"></span>
+                
+          </div>
+      </div>
+            
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Desg">Start Date</label>
+                <div class="col-md-10">
+                    <input formControlName="StartDate"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                    
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Mid">End Date</label>
+                <div class="col-md-10">
+                    
+                      <input formControlName="endDate"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                      <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                      
+                  </div>
+              </div>
+            
+    
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Email">ClientName</label>
+                <div class="col-md-10">
+                    <input formControlName="ClientName" class="form-control text-box single-line" id="Email" name="Email" type="text" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+    
+            
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Edit" class="btn btn-default" />
+                </div>
+            </div>
+          </div>
+    </form>
+    <div>
+        <a href="/project/showproject">Back to List</a>
+    </div>
+  
+  
+  
+  
+  
+   
+    
+  
+  
+     
+  

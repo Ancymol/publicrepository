@@ -1,0 +1,55 @@
+<h2>Create</h2>
+  
+  <form [formGroup]="FormData" (ngSubmit) ="OnClickSubmit(FormData.value)" >
+      <div class="form-horizontal">
+          <h4>Manager Comments</h4>
+          
+<!--           
+       
+          <div class="form-group">
+              <label class="control-label col-md-2" for=" Commission">Manager Commission</label>
+                <div class="col-md-10">
+                  <input formControlName="Commission" class="form-control text-box single-line" type="number" value=""/>
+                    
+                </div>
+             </div> -->
+          
+             <div class="form-group">
+              <label class="control-label col-md-2" for=" Comments">Manager Comments</label>
+                <div class="col-md-10">
+                  <input formControlName="Comments" class="form-control text-box single-line" type="text" value=""/>
+                    
+                        <div *ngIf="FormData.controls. Comments.errors && (FormData.controls. Comments.dirty || FormData.controls. Comments.touched)" class="alert-danger">
+                            <div *ngIf="FormData.controls. Comments.errors.required">
+                                This field Required
+                            </div>
+                        </div>
+                </div>
+             </div>
+          
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="Pid">Project Id</label>
+              <div class="col-md-10">
+                  <input formControlName="Pid" class="form-control text-box single-line" id="Pid" name="Pid" type="number" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Pid" data-valmsg-replace="true"></span>
+              </div>
+          </div>
+        
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                   <input type="submit" value="Create" class="btn btn-default"/> <!--[disabled] ="!FormData.valid" -->
+              </div>
+          </div>
+        </div>
+  </form>
+  
+  <div>
+      <a href="/managercomments/showcomments">Back to List</a>
+  </div>
+
+
+
+
+
+ 

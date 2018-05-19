@@ -1,0 +1,70 @@
+
+  <h2>Edit</h2>
+  
+  <form [formGroup]="FormData" (ngSubmit) ="OnClickSubmit(FormData.value)" >
+      <div class="form-horizontal">
+          <h4>Task</h4>
+          
+          
+       
+          <div class="form-group">
+              <label class="control-label col-md-2" for="EName">Assigned To</label>
+                <div class="col-md-10">
+                  <input formControlName="AsTo" class="form-control text-box single-line" type="number" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="EName" data-valmsg-replace="true"></span>
+                        
+                </div>
+             </div>
+          
+             <div class="form-group">
+                    <label class="control-label col-md-2" for="Desg">Start Date</label>
+                    <div class="col-md-10">
+                        <input formControlName="tsdate"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                        
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="Mid">End Date</label>
+                    <div class="col-md-10">
+                        
+                          <input formControlName="tedate"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                          <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                          
+                      </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="control-label col-md-2" for="Mid">Task Completion</label>
+                        <div class="col-md-10">
+                            
+                              <input formControlName="Tc"class="form-control text-box single-line" data-val="true" data-val-required="The Desg field is required." id="Desg" name="Desg" type="text" value="" />
+                              <span class="field-validation-valid text-danger" data-valmsg-for="Desg" data-valmsg-replace="true"></span>
+                              
+                          </div>
+                      </div>
+          
+  
+          <div class="form-group">
+              <label class="control-label col-md-2" for="SkillSet">User Id</label>
+              <div class="col-md-10">
+                  <input formControlName="uid" class="form-control text-box single-line" id="SkillSet" name="SkillSet" type="number" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="SkillSet" data-valmsg-replace="true"></span>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                   <input type="submit" value="Edit" class="btn btn-default"/> <!--[disabled] ="!FormData.valid" /> -->
+              </div>
+          </div>
+        </div>
+  </form>
+  
+  <div>
+      <a href="/projecttask/showtask">Back to List</a>
+  </div>
+
+
+
+    

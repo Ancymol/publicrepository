@@ -1,0 +1,47 @@
+<div class="container body-content">
+        
+
+
+  <h2>Edit</h2>
+  
+  <form [formGroup]="FormData" (ngSubmit) = "OnClickSubmit(FormData.value)" ><input name="__RequestVerificationToken" type="hidden" value="LkHnVtCOMsPbdGsBP4MKmitLW28SOoFdbXvLZD5im-IySDPm7vGcNtsQxd09w8L1rM2gQ-hulmyYd93O8P6jai_9gy814vuxprWez2W2SUk1" />    <div class="form-horizontal">
+          <h4>Userstory</h4>
+          <hr >
+          
+       
+          <div class="form-group">
+              <label class="control-label col-md-2" for="EName">Userstory</label>
+              <div class="col-md-10">
+                  <input formControlName="story" class="form-control text-box single-line" data-val="true" data-val-required="The EName field is required." id="EName" name="EName" type="text" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="EName" data-valmsg-replace="true"></span>
+              </div>
+          </div>
+  
+          
+          <div class="form-group">
+              <label class="control-label col-md-2" for="Mid">Project Id</label>
+              <div class="col-md-10">
+                  <input formControlName="Project_id"class="form-control text-box single-line" data-val="true" data-val-number="The field Mid must be a number." id="Mid" name="Mid" type="number" value="" />
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Mid" data-valmsg-replace="true"></span>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                  <input type="submit" value="Edit" class="btn btn-default" />
+              </div>
+          </div>
+      </div>
+  </form>
+  <div>
+      <a href="/userstory/showstory">Back to List</a>
+  </div>
+
+
+
+
+
+  
+
+
+   

@@ -1,0 +1,47 @@
+
+<form [formGroup]="FormData" (ngSubmit) = "OnClickSubmit(FormData.value)" >
+  <div class="form-horizontal">
+
+<h4>Details Of Project Task</h4>
+<hr >
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="EName">Assigned To</label>
+      <div class="col-md-10">
+          <label class="control-label col-md-2">{{ taskdetails.AsTo}}</label> 
+              
+      </div>
+   </div>
+
+   <div class="form-group">
+          <label class="control-label col-md-2" for="Desg">Start Date</label>
+          <div class="col-md-10">
+              <label class="control-label col-md-2">{{ taskdetails.tsdate}}</label> 
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="control-label col-md-2" for="Mid">End Date</label>
+          <div class="col-md-10">
+              <label class="control-label col-md-2">{{ taskdetails.tedate}}</label> 
+               </div>
+        </div>
+        <div class="form-group">
+              <label class="control-label col-md-2" for="Mid">Task Completion</label>
+              <div class="col-md-10">
+                  <label class="control-label col-md-2">{{ taskdetails.Tc}}</label>
+                   </div>
+            </div>
+
+
+<div class="form-group">
+    <label class="control-label col-md-2" for="SkillSet">User Id</label>
+    <div class="col-md-10">
+        <label class="control-label col-md-2">{{ taskdetails.uid}}</label>
+          </div>
+</div>
+<div>
+<a href="/projecttask/showtask">Back to List</a>
+</div>
+
+
